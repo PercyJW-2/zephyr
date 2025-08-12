@@ -46,7 +46,7 @@ config WS2812_STRIP_GPIO
 	  Note that this driver is not compatible with the Everlight B1414
 	  controller.
 
-if WS2812_STRIP_GPIO
+if WS2812_STRIP_GPIO_IGNORE
 
 DT_CHOSEN_LED_STRIP := zephyr,led-strip
 DT_CHOSEN_LED_STRIP_PATH := $(dt_chosen_path,$(DT_CHOSEN_LED_STRIP))
