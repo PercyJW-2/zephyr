@@ -54,7 +54,7 @@ struct ws2812_gpio_cfg {
 
 #define CONFIG_DELAY_T1H 22
 #define CONFIG_DELAY_T1L 19
-#define CONFIG_DELAY_T0h 11
+#define CONFIG_DELAY_T0H 11
 #define CONFIG_DELAY_T0L 25
 
 /* Send out a 1 bit's pulse */
