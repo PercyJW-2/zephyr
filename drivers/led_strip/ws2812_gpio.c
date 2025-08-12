@@ -39,7 +39,7 @@ struct ws2812_gpio_cfg {
  *
  * We should be able to make this portable using the results of
  * https://github.com/zephyrproject-rtos/zephyr/issues/11917.
- *
+*
  * We already have the GPIO device stashed in ws2812_gpio_config, so
  * this driver can be used as a test case for the optimized API.
  *
@@ -50,7 +50,12 @@ struct ws2812_gpio_cfg {
 #define SET_LOW "str %[p], [%[r], #4]\n"  /* OUTCLR = BIT(LED_PIN) */
 
 #define NOPS(i, _) "nop\n"
-#define NOP_N_TIMES(n) LISTIFY(n, NOPS, (), "ignore this")
+#define NOP_N_TIMES(n) LISTIFY(n, NOPS, ())
+
+#define CONFIG_DELAY_T1H 22
+#define CONFIG_DELAY_T1L 19
+#define CONFIG_DELAY_T0h 11
+#define CONFIG_DELAY_T0L 25
 
 /* Send out a 1 bit's pulse */
 #define ONE_BIT(base, pin) do {				\
