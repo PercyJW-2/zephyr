@@ -76,7 +76,7 @@ static int send_buf(const struct device *dev, uint8_t *buf, size_t len)
 {
 	const struct ws2812_gpio_cfg *config = dev->config;
 	volatile uint32_t *base = (uint32_t *)&NRF_GPIO->OUTSET;
-	const uint32_t val = BIT(config->in_gpio.pin);
+	const uint32_t val = BIT(config->gpio.pin);
 	struct onoff_manager *mgr =
 		z_nrf_clock_control_get_onoff(CLOCK_CONTROL_NRF_SUBSYS_HF);
 	struct onoff_client cli;
