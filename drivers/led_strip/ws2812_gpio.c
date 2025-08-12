@@ -52,10 +52,10 @@ struct ws2812_gpio_cfg {
 #define NOPS(i, _) "nop\n"
 #define NOP_N_TIMES(n) LISTIFY(n, NOPS, ())
 
-#define CONFIG_DELAY_T1H 22
-#define CONFIG_DELAY_T1L 19
-#define CONFIG_DELAY_T0H 11
-#define CONFIG_DELAY_T0L 25
+#define CONFIG_DELAY_T1H 45
+#define CONFIG_DELAY_T1L 38
+#define CONFIG_DELAY_T0H 22
+#define CONFIG_DELAY_T0L 51
 
 /* Send out a 1 bit's pulse */
 #define ONE_BIT(base, pin) do {				\
