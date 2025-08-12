@@ -50,7 +50,7 @@ struct ws2812_gpio_cfg {
 #define SET_LOW "str %[p], [%[r], #4]\n"  /* OUTCLR = BIT(LED_PIN) */
 
 #define NOPS(i, _) "nop\n"
-#define NOP_N_TIMES(n) LISTIFY(n, NOPS, (""))
+#define NOP_N_TIMES(n) LISTIFY(n, NOPS, (), "ignore this")
 
 /* Send out a 1 bit's pulse */
 #define ONE_BIT(base, pin) do {				\
