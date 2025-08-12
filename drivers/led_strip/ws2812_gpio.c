@@ -232,7 +232,7 @@ static const uint8_t ws2812_gpio_##idx##_color_mapping[] =		\
 	WS2812_COLOR_MAPPING(idx);					\
 									\
 	static const struct ws2812_gpio_cfg ws2812_gpio_##idx##_cfg = { \
-		.gpio = GPIO_DT_SPEC_INST_GET(idx, in_gpios),	\
+		.gpio = GPIO_DT_SPEC_INST_GET(idx, gpios),		\
 		.num_colors = WS2812_NUM_COLORS(idx),			\
 		.color_mapping = ws2812_gpio_##idx##_color_mapping,	\
 	};								\
